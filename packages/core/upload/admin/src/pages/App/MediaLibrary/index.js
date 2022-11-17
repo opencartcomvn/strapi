@@ -28,7 +28,7 @@ import Cog from '@strapi/icons/Cog';
 import { UploadAssetDialog } from '../../../components/UploadAssetDialog/UploadAssetDialog';
 import { EditFolderDialog } from '../../../components/EditFolderDialog';
 import { EditAssetDialog } from '../../../components/EditAssetDialog';
-import { AssetTableList } from '../../../components/AssetTableList';
+import { TableList } from '../../../components/TableList';
 import { AssetGridList } from '../../../components/AssetGridList';
 import { FolderList } from '../../../components/FolderList';
 import SortPicker from '../../../components/SortPicker';
@@ -270,7 +270,7 @@ export const MediaLibrary = () => {
 
           {/* TODO: fix AssetListTable should handle no assets views (loading) */}
           {canRead && !isGridView && (assetCount > 0 || folderCount > 0) && (
-            <AssetTableList
+            <TableList
               assetCount={assetCount}
               folderCount={folderCount}
               onEditAsset={setAssetToEdit}
